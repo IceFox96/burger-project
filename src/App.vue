@@ -3,29 +3,40 @@
 
 import { ref } from 'vue'
 
-const count = ref(0);
-
-const input = ref('');
-
-const sum = () => count.value ++;
 
 </script>
 
+
+
 <template>
 
-<h2>Стартовая страница</h2>
+<div class="center">
+    <h3>Вход</h3>
+    <input class="inputLogin" type="e-mail" placeholder="e-mail"/>
+    <input class="inputLogin" type="password" placeholder="password"/>
+    <button>Вход</button>
+</div>
 
-<h3>{{ input }}</h3>
-
-<input type="text" placeholder="input text" v-model="input">
-
-<h3>{{ count }}</h3>
-<button type="button" @click="sum()">+</button>
-<button type="button" @click="() => count --">-</button>
-<button type="button" @click="() => count = 0">clear</button>
 
 </template>
 
+
+
+
 <style>
+
+.center {
+    
+    text-align: center;
+    margin: auto auto;
+
+}
+
+.inputLogin {
+
+display: block;
+margin: 20px auto 20px auto;
+
+}
 
 </style>
